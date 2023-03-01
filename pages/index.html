@@ -6,29 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../blocks/index.css">
     <title>purr purr</title>
   </head>
 
   <body class="body">
     <header>
       <div class="menu">
-        <nav>
-          <ul class="menu__fall">
-            <li>Главная</li>
-            <li>История</li>
-            <li>Галерея</li>
-            <li>Контакты</li>
-          </ul>
-        </nav>
+        <button class="menu__button">
+          <p class="menu__button-text">MENU</p>
+          <nav class="menu__dropdown">
+            <a class="menu__link" href="#">Главная</a>
+            <a class="menu__link" href="#">История</a>
+            <a class="menu__link" href="#">Галерея</a>
+            <a class="menu__link" href="#">Контакты</a>
+          </nav>
+        </button>
+
       </div>
     </header>
 
-    <content>
-      <img class="cat-face__image" src="../images/IMG_20220604_203722_709.jpg">
+    <content class="content">
+      <img class="content__image" src="../images/header.png">
+      <div class="content__two-blocks">
+        <div class="content__block">
+          <div class="content__text-container">
+            <p class="content__story">
+              Привет! Это сайт о моей кошке. Когда-то давно, десять лет назад, когда мне отдали ее 
+              подвальным котенком, вместе с ней мне отдали и ее имя. Ее звали Марусей, и в первый же месяц совместной жизни
+              я поняла, почему. Потому что она настоящая Маруся, не Машка, не Муська, а круассанчик Марусяндер.<br><br>
+              Это особенная кошка. Не только потому, что ей достался целый сайт в честь того, что мать
+              изучает фронтенд, нет. Эта кошка - ужасно территориальное, ревнивое животное, признающее только своих двух хозяек. 
+              Но при этом это самый ласковый в мире зверь. Мы очень любим эту кошку. Здесь, на сайте, можно посмотреть галерею с ее
+              фотографиями с самого младенчества, почитать забавные истории о ней и поумиляться. Relax~
+            </p>
+          </div>
+        </div>
+        <div class="content__block">
+          <img class="cat-face__image" src="../images/IMG_20220604_203722_709.jpg">
+        </div>
+      </div>
+      <div class="content__form">
+        <p class="content__form-title">
+          Напиши свою почту - получишь кошачью фотку!
+        </p>
+        <form class="content__form-input">
+          <input class="content__input" type="name" name="name">
+          <input class="content__input" type="email" name="email">
+          <button class="content__button-submit" type="submit">
+            Отправить
+          </button>
+        </form>
+      </div>
     </content>
 
-    <footer>
-      
+    <footer class="footer">
+      <p class="footer__copyright">
+        © Nati
+      </p>
+      <nav class="footer__links">
+        <p>
+          <a class="footer__link" href="#">LinkedIn</a>
+        </p>
+        <p>
+          <a class="footer__link" target="blank" href="https://github.com/natagaiduk">GitHub</a>
+        </p>
+      </nav>
     </footer>
   </body>
