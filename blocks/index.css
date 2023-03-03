@@ -3,26 +3,24 @@
 .body {
 	font-family: "Montserrat", sans-serif;
 	color: #black;
-	background-color: #A3E2DE;
+	background-color: black;
 	margin: 0;
 }
 
 .menu {
 	width: 180px;
-	height: 100%;
-	background-color: #E9FEFF;
+	background-color: #FFE9F7;
 	position: absolute;
 	margin: 0;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	outline: 1px solid green;
 }
 
 .menu__button {
 	width: 150px;
 	height: 50px;
-	background-color: #A3E2DE;
+	background-color: #E33DAA;
 	color: #black;
 	font-size: 24px;
 	border: none;
@@ -39,31 +37,75 @@
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	outline: 1px solid yellow;
 	display: none;
 }
 
 .menu__link {
 	display: block;
 	margin: 10px 0 0;
-	background-color: #92e0db;
+	background-color: #E33DAA;
 	width: 150px;
 	height: 30px;
 	align-self: center;
 	line-height: 30px;
+	text-decoration: none;
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
 }
 
 .menu__button:hover .menu__dropdown {
 	display: flex;
 }
 
+.content__menu-block {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 180px;
+	height: 100%;
+	z-index: -1;
+	background-color: #FFE9F7;
+}
+
+.content__circles {
+	border-radius: 50%;
+	background-color: #E33DAA;
+}
+
+.one-circle {
+	width: 220px;
+	height: 220px;
+	position: absolute;
+	left: -110px;
+	top: -120px;
+	z-index: -1;
+}
+
+.two-circle {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: -50px;
+	top: -50px;
+	z-index: -1;
+}
+
+.three-circle {
+	width: 280px;
+	height: 280px;
+	position: absolute;
+	right: -120px;
+	top: 340px;
+	z-index: -1;
+}
+
 .content {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	flex-wrap: nowrap;
-	margin: 0 30px 200px;
-	outline: 1px solid red;
+	flex-wrap: wrap;
+	margin: 0 30px 0;
 }
 
 .content__image {
@@ -81,9 +123,9 @@
 .content__block {
 	width: 500px;
 	height: 500px;
-	background-color: #E9FEFF;
-	outline: 1px blue solid;
+	background-color: #E33DAA;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	position: relative;
 }
@@ -114,8 +156,7 @@
 	align-items: center;
 	justify-content: center;
 	right: 0px;
-	border: 3px solid #A3E2DE;
-	background-color: #E9FEFF;
+	background-color: #FFE9F7;
 	transition: ease 1s;
 }
 
@@ -123,7 +164,6 @@
 	width: 400px;
 	height: 400px;
 	text-align: justify;
-	outline: 1px solid red;
 	align-self: center;
 	line-height: 22px;
 	font-size: 16px;
@@ -134,37 +174,37 @@
 	height: 500px;
 	background-position: cover;
 	transition: ease 1s;
-	border: 3px solid #A3E2DE;
 }
 
 .content__form {
 	width: 400px;
 	height: 250px;
 	margin: 100px auto;
-	outline: solid 1px blueviolet;
 	display: flex;
 	flex-direction: column;
-	background-color: #E9FEFF;
+	background-color: #FFE9F7;
+	position: relative;
 }
 
 .content__form-title {
 	text-align: center;
 	height: 60px;
+	font-size: 16px;
 }
 
 .content__form-input {
 	display: flex;
 	flex-direction: column;
-	outline: yellow solid 1px;
 }
 
 .content__input {
-	width: 300px;
+	width: 290px;
 	height: 30px;
 	align-self: center;
 	border: none;
 	padding: 0;
-	background-color: #A3E2DE;
+	background-color: #E33DAA;
+	outline: none;
 }
 
 .content__form-input:first-child {
@@ -175,20 +215,45 @@
 	margin: 20px 0 0;
 }
 
+.content__input::placeholder {
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+}
+
+.content__input[type="text"] {
+	padding: 0 0 0 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+}
+
+.content__input[type="email"] {
+	padding: 0 0 0 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+}
+
 .content__button-submit {
-	background-color: #A3E2DE;
+	background-color: #E33DAA;
 	border: none;
 	width: 300px;
 	height: 30px;
 	align-self: center;
 	margin: 20px 0 0;
 	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	transition: 1s ease;
+}
+
+.content__button-submit:hover {
+	transform: scale(1.1);
+	transition: 1s ease;
 }
 
 .footer {
 	width: 100%;
 	height: 200px;
-	background-color: #E9FEFF;
+	background-color: #FFE9F7 ;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -212,7 +277,12 @@
 	text-decoration: none;
 }
 
-.footer__link:visited, .footer__link:active {
+.footer__link:visited {
+	text-decoration: none;
+	color: #a10b38;
+}
+
+.footer__link:active {
 	text-decoration: none;
 	color: #a10b38;
 }

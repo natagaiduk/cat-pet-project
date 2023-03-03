@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../blocks/index.css">
+    <link rel="stylesheet" href="blocks/index.css">
     <title>purr purr</title>
   </head>
 
@@ -27,7 +27,9 @@
     </header>
 
     <content class="content">
-      <img class="content__image" src="../images/header.png">
+      <div class="content__menu-block">
+      </div>
+      <img class="content__image" src="images/header2.png">
       <div class="content__two-blocks">
         <div class="content__block">
           <div class="content__text-container">
@@ -41,9 +43,13 @@
               фотографиями с самого младенчества, почитать забавные истории о ней и поумиляться. Relax~
             </p>
           </div>
+          <div class="content__circles one-circle">
+          </div>
         </div>
         <div class="content__block">
-          <img class="cat-face__image" src="../images/IMG_20220604_203722_709.jpg">
+          <img class="cat-face__image" src="images/IMG_20220604_203722_709.jpg">
+        <div class="content__circles three-circle">
+        </div>
         </div>
       </div>
       <div class="content__form">
@@ -51,12 +57,14 @@
           Напиши свою почту - получишь кошачью фотку!
         </p>
         <form class="content__form-input">
-          <input class="content__input" type="name" name="name">
-          <input class="content__input" type="email" name="email">
+          <input class="content__input" type="text" checked placeholder="Имя" name="name">
+          <input class="content__input" type="email" placeholder="E-mail" name="email">
           <button class="content__button-submit" type="submit">
             Отправить
           </button>
         </form>
+        <div class="content__circles two-circle">
+        </div>
       </div>
     </content>
 
@@ -66,7 +74,7 @@
       </p>
       <nav class="footer__links">
         <p>
-          <a class="footer__link" href="#">LinkedIn</a>
+          <a class="footer__link" target="blank" href="https://www.linkedin.com/in/natalya-gayduk-5a4211257/">LinkedIn</a>
         </p>
         <p>
           <a class="footer__link" target="blank" href="https://github.com/natagaiduk">GitHub</a>
